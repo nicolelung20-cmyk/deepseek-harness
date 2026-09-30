@@ -51,6 +51,11 @@ Each profile may set a `retryPolicy`; omission uses normal mode with five retrie
         retryPolicy:
           mode: normal
           maxRetries: 3
+      openrouter:
+        apiKeyEnv: OPENROUTER_API_KEY
+        baseURL: https://openrouter.ai/api/v1
+        models:
+          - id: anthropic/claude-opus-latest
       anthropic:
         apiKeyEnv: ANTHROPIC_API_KEY
         models:
