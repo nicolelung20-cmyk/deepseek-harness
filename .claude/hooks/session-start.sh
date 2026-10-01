@@ -6,6 +6,10 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
 
+# Run in the background so the session starts immediately. Tests and linters
+# need the install to finish first; check that node_modules exists before using them.
+echo '{"async": true, "asyncTimeout": 300000}'
+
 cd "${CLAUDE_PROJECT_DIR:-$(pwd)}"
 
 # pnpm is pinned by package.json "packageManager"; corepack selects that version.
