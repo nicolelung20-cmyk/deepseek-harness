@@ -110,7 +110,7 @@ export class PaperExecutionAdapter implements ExecutionAdapter {
       provider: this.provider,
       status: 'filled',
       executedQuantity: intent.quantity,
-      averagePrice: round(price + (intent.side === 'buy' ? fee / intent.quantity : -fee / intent.quantity)),
+      averagePrice: round(price),
     }
     this.ledger.append(order.orderId, 'submitted', { provider: this.provider })
     this.ledger.append(order.orderId, 'fill', {
