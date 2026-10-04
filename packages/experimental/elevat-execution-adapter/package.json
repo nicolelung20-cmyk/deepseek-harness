@@ -1,7 +1,13 @@
 {
-  "name": "@elevat/execution-adapter",
+  "name": "@deepseek-ai/dsh-elevat-execution-adapter",
+  "description": "Provider-neutral crypto execution boundary with paper trading, risk controls, and fail-closed live adapters for Elevat",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolelung20-cmyk/deepseek-harness.git",
+    "directory": "packages/experimental/elevat-execution-adapter"
+  },
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,9 +18,7 @@
     }
   },
   "scripts": {
-    "test": "vitest run tests"
+    "test": "pnpm exec vitest run tests"
   },
-  "devDependencies": {
-    "vitest": "workspace:*"
-  }
+  "license": "MIT"
 }
