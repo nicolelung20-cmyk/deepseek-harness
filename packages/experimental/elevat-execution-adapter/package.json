@@ -18,7 +18,7 @@
     }
   },
   "scripts": {
-    "test": "pnpm exec vitest run tests"
+    "test": "pnpm --dir ../../.. exec vitest run packages/experimental/elevat-execution-adapter/tests/execution-adapter.spec.ts"
   },
   "license": "MIT"
 }
